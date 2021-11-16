@@ -32,6 +32,9 @@
 				'type' => 'text',
 				'options' => [
 					'label' => 'Last Name'
+				],
+				'attributes' => [
+					'required' => 'required'
 				]
 			]);
 
@@ -40,6 +43,9 @@
 				'type' => 'date',
 				'options' => [
 					'label' => 'Start Date'
+				],
+				'attributes' => [
+					'required' => 'required'
 				]
 			]);
 
@@ -48,6 +54,9 @@
 				'type' => 'date',
 				'options' => [
 					'label' => 'Start Date'
+				],
+				'attributes' => [
+					'required' => 'required'
 				]
 			]);
 
@@ -56,6 +65,9 @@
 				'type' => 'number',
 				'options' => [
 					'label' => 'Policy Number'
+				],
+				'attributes' => [
+					'required' => 'required'
 				]
 			]);
 

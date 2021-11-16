@@ -35,7 +35,7 @@ class IndexController extends AbstractActionController
     	$policy = new \Policy\Model\Policy();
     	$form->setData($request->getPost());
     	if(!$form->isValid()){
-    		exit('id is not correct');
+    		exit('fill the all data');
     	}
 
     	$policy->exchangeArray($form->getData());
