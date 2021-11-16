@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <h1>Welcome to <span class="zf-green">Zend Framework 3</span></h1>
+</div>
+<div class="row">
+	<a href="<?php echo $this->basePath('/policy/add') ?>" class="btn btn-primary">Add Policy</a>
+</div>
+<div class="row">
+	<table class="table table-hover">
+	  <thead>
+	    <tr>
+	      <th scope="col">Fiesr Name</th>
+	      <th scope="col">Last Name</th>
+	      <th scope="col">Start Date</th>
+	      <th scope="col">End Date</th>
+	      <th scope="col">Policy Number</th>
+	      <th scope="col">Premium</th>
+	      <th scope="col">Action</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<?php if(count($policies) > 0): ?>
+	  		<?php foreach($policies as $policy): ?>
+			    <tr>
+			      <td><?php echo $policy->getFirstName(); ?></td>
+			      <td><?php echo $policy->getLastName(); ?></td>
+			      <td><?php echo $policy->getStartDate(); ?></td>
+			      <td><?php echo $policy->getEndDate(); ?></td>
+			      <td><?php echo $policy->getPolicyNumber(); ?></td>
+			      <td><?php echo $policy->getPremium(); ?></td>
+			      <td>
+			      	<a href="<?php echo $this->url('policy', ['action' => 'view', 'id' => $policy->getId() ]) ?>" class="btn btn-outline-primary">View</a>
+			      	<a href="<?php echo $this->url('policy', ['action' => 'edit', 'id' => $policy->getId() ]) ?>" class="btn btn-outline-success">Update</a>
+			      	<a href="<?php echo $this->url('policy', ['action' => 'delete', 'id' => $policy->getId() ]) ?>" class="btn btn-outline-danger">Delete</a>
+			      </td>
+			    </tr>
+			<?php endforeach; ?>
+	    <?php else: ?>
+	    	<tr>No Records Found! </tr>
+	    <?php endif; ?>
+	  </tbody>
+	</table>
+</div>

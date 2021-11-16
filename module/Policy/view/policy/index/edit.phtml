@@ -1,0 +1,38 @@
+<h1>Update Policy</h1>
+
+<?php 
+	$form->setAttribute('action', $this->url('policy', ['action' => 'add']));
+	$form->prepare();	
+?>
+
+<?php
+	echo $this->form()->openTag($form);
+	echo $this->formHidden($form->get('id'));
+?>
+<?php
+	echo $this->formRow($form->get('first_name'));
+?>
+<br/>
+<?php
+	echo $this->formRow($form->get('last_name'));
+?>
+<br/>
+<?php
+	echo $this->formRow($form->get('start_date'));
+?>
+<br/>
+<?php
+	echo $this->formRow($form->get('end_date'));
+?>
+<br/>
+<?php
+	echo $this->formRow($form->get('policy_number'));
+?>
+<br/>
+<?php
+	echo $this->formRow($form->get('premium'));
+?>
+<br/>
+<?php
+	echo $this->formSubmit($form->get('submit'));
+?>

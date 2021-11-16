@@ -1,0 +1,27 @@
+<h1>View Policy</h1>
+
+	<ul class="list-group">
+		<li class="list-group-item align-ltems-center">
+			<span>First Name: </span><?php echo $policy->getFirstName(); ?>
+		</li>
+		<li class="list-group-item align-ltems-center">
+			<span>Last Name: </span><?php echo $policy->getLastName(); ?>
+		</li>
+		<li class="list-group-item align-ltems-center">
+			<span>Start Date: </span><?php echo $policy->getStartDate(); ?>
+		</li>
+		<li class="list-group-item align-ltems-center">
+			<span>End Date: </span><?php echo $policy->getEndDate(); ?>
+		</li>
+		<li class="list-group-item align-ltems-center">
+			<span>Policy Number: </span><?php echo $policy->getPolicyNumber(); ?>
+		</li>
+		<li class="list-group-item align-ltems-center">
+			<span>Premium: </span><?php echo $policy->getPremium(); ?>
+		</li>
+	</ul>
+
+
+<div class="">
+	<a href="<?php echo $this->basePath('/') ?>" class="btn btn-primary">Back</a>
+</div>

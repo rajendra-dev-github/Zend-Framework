@@ -1,0 +1,14 @@
+<h1>Delete Policy</h1>
+
+<?php
+	$url = $this->url('policy', ['action' => 'delete', 'id' => $id]);
+?>
+
+<form action="<?php echo $url ?>" method="POST">
+	<p>Are you sure?</p>
+	<div class="form-group">
+		<input type="hidden" name="id" value="<?php echo $policy->getId(); ?>">
+		<input type="submit" name="delete" value="Yes" class="btn btn-danger">
+		<input type="submit" name="delete" value="No" class="btn btn-default">
+	</div>
+</form>
